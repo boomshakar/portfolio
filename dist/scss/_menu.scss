@@ -1,0 +1,119 @@
+.menu__btn {
+    position: absolute;
+    z-index: 1;
+    width: 28px;
+    height: 20px;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    @include transition-ease;
+
+    &-burger {
+        position: absolute;
+        width: 28px;
+        height: 3px;
+        right: 0;
+        top: 0.5rem;
+        background: $text-color;
+        border-radius: 5px;
+        @include transition-ease;
+
+        &::before {
+            content: '';
+            width: 28px;
+            position: absolute;
+            height: 3px;
+            top: -8px;
+            background: $text-color;
+            border-radius: 5px;
+            @include transition-ease;
+        }
+
+        &::after {
+            content: '';
+            width: 20px;
+            position: absolute;
+            height: 3px;
+            top: 8px;
+            background: $text-color;
+            border-radius: 5px;
+            @include transition-ease;
+        }
+
+        &.open {
+            transform:rotate(720deg);
+            background: transparent;
+
+
+            &::before {
+                transform: rotate(45deg) translate(5px, 8px);
+            }
+
+            &::after {
+                width: 28px;
+                transform: rotate(-45deg) translate(3px, -7px);
+            }
+        }
+    }
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    visibility: hidden;
+
+    &.open {
+        visibility: visible;
+    }
+
+    .menu__nav {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+        background: $primary-color;
+        opacity: 0.9;
+        list-style-type: none;
+        padding-right: 1rem;
+        transform: translateY(-100%);
+        @include transition-ease;
+
+        &.open {
+            transform: translateY(0);
+        }
+
+        &-item {
+            transform: translateX(100vw);
+            border-bottom : 1px solid $accent-color;
+            display: inline-block;
+            font-size: 2rem;
+            padding: 2rem 0;
+            font-weight: 400;
+            text-transform: uppercase;
+            @include transition-ease;
+
+            &:hover {
+                color: $secondary-color;
+            }
+
+            &.open{
+                transform: translateX(0);
+            }
+
+            &.active > a {
+                color: $secondary-color;
+            }
+        }
+
+    }
+}
+
+@for $f from 1 through 4 {
+    .menu__nav-item:nth-child(#{$f}) {
+        transition-delay: ($f * 0.1s) + 0.15s;
+    }
+}

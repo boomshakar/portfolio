@@ -1,0 +1,27 @@
+.home {
+    height: 100%;
+    padding-top: 40vh;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+    background: 
+        linear-gradient(
+            to right,
+            rgba($primary-color, 0.9),
+            rgba($primary-color, 0.5)
+        ),
+        url("../img/img1.JPG") center top;
+    background-size: cover;
+
+    &__name {
+        font-size: 5rem;
+        padding-bottom: 1rem;
+        border-bottom: 2.5px solid $secondary-color;
+        margin-bottom: 1rem;
+
+        &-last {
+            color: $secondary-color;
+            font-weight: 700;
+        }
+    }
+}
