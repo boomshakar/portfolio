@@ -1,0 +1,35 @@
+.contact {
+    height: 100%;
+    padding-top: 40vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background: 
+        linear-gradient(
+            to right,
+            rgba($primary-color, 0.9),
+            rgba($primary-color, 0.5)
+        ),
+        url("../img/img1.JPG") center top;
+    background-size: cover;
+
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    &__options {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .social-icons {
+        position: initial;
+        margin-top: 2rem;
+    }
+
+}
