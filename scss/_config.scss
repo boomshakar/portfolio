@@ -11,6 +11,13 @@ $text-color: #fff;
 
 @mixin transition-ease {
     transition: all 0.5s ease-in-out;
+    
+}
+
+@mixin media-sm {
+    @media screen and (max-width: 599px) {
+        @content;
+    }
 }
 
 @mixin media-md {
