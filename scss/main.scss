@@ -40,11 +40,8 @@ main {
 
     .social__icons {
         position: fixed;
-        bottom: 1rem;
-        left: 1rem;
 
         a {
-            padding: 0.27rem;
             @include transition-ease;
 
             &:hover {
@@ -55,12 +52,6 @@ main {
 
     footer {
         position: fixed;
-        bottom: 1rem;
-        right: 1rem;
-        font-size: 1rem;
-        text-align: right;
-        padding: 1rem;
-        color: $text-color;
     }
 }
 

@@ -24,6 +24,7 @@
         .text-secondary {
             padding-bottom: 1rem;
             font-size: 2rem;
+            font-weight: 600;
         }
 
         p {
@@ -91,6 +92,6 @@
     }
 
     footer {
-        transform: rotate(90deg) translate(-4rem, -4rem);
+        transform: rotate(90deg) translate(-3.5rem, -3.5rem);
     }
 }

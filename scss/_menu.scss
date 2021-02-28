@@ -5,6 +5,7 @@
     height: 20px;
     top: 1rem;
     right: 1rem;
+    background: transparent;
     cursor: pointer;
     @include transition-ease;
 
@@ -88,6 +89,19 @@
 
         &-item {
             transform: translateX(100vw);
+            @include transition-ease;
+
+
+            &.open{
+                transform: translateX(0);
+            }
+
+            &.active > a {
+                color: $secondary-color;
+            }
+        }
+
+        &-link {
             border-bottom : 1px solid $accent-color;
             display: inline-block;
             font-size: 2rem;
@@ -95,16 +109,8 @@
             font-weight: 400;
             text-transform: uppercase;
             @include transition-ease;
-
+            
             &:hover {
-                color: $secondary-color;
-            }
-
-            &.open{
-                transform: translateX(0);
-            }
-
-            &.active > a {
                 color: $secondary-color;
             }
         }

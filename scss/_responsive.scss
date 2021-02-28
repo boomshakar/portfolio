@@ -1,3 +1,49 @@
+@include media-sm {
+    .home {
+        h2 {
+            font-size: 13px;
+        }
+        &__name {
+            font-size: 2.5rem;
+            padding: 0.5rem 5px;
+            border-bottom: 2.5px solid $secondary-color;
+            margin-bottom: 0.5rem;
+        }
+        h3 {
+            font-size: 1rem;
+            padding: 0 10px;
+        }
+
+    }
+
+    main {
+        .social__icons {
+            bottom: 0.5rem;
+            left: 0.5rem;
+            a {
+                font-size: 11px;
+                padding: 5px;
+                @include transition-ease;
+    
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+
+        }
+        footer {
+            bottom: 0.5rem;
+            right: 0.5rem;
+            font-size: 13px;
+            text-align: right;
+            padding: 5px;
+            color: $text-color;
+        }
+    }
+
+}
+
+
 @include media-md {
     .menu__btn {
         visibility: hidden;
@@ -20,6 +66,7 @@
 
             &-link {
                 font-size: 1rem;
+                border-style: none;
             }
         }
     }
@@ -42,6 +89,31 @@
 
     .hobbies__items {
         columns: 2;
+    }
+    
+    main {
+        .social__icons {
+            bottom: 1rem;
+            left: 1rem;
+            a {
+                font-size: 11px;
+                padding: 5px;
+                @include transition-ease;
+    
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+
+        }
+        footer {
+            bottom: 1rem;
+            right: 1rem;
+            font-size: 1rem;
+            text-align: right;
+            padding: 5px 0.3rem;
+            color: $text-color;
+        }
     }
 }
 
