@@ -487,5 +487,6 @@ main {
       main .social__icons a:hover {
         color: #66fcf1; }
   main footer {
-    color: #66fcf1; 
     position: fixed; }
+    main footer a {
+      color: #66fcf1; } 
